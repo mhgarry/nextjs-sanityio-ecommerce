@@ -6,7 +6,6 @@ export const productType = defineType({
     title: 'Product',
     fields: [
         defineField({
-        
             name: 'name',
             type: 'string',
             title: 'Name of the product',
@@ -33,5 +32,11 @@ export const productType = defineType({
             title: 'Price of the product',
             type: 'number',
         }),
+        defineField({
+            name: 'category',
+            type: 'reference',
+            title: 'Category',
+            to: [{ type: 'category' }]
+        })
     ]
 })
