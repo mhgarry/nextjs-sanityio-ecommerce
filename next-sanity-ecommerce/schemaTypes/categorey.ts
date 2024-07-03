@@ -1,16 +1,16 @@
-import { definedType, definedField } from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export const categoryType = definedType({
+export const categoryType = defineType({
     name: 'category',
     type: 'document',
     title: 'Category',
     fields: [
-        definedField({
+        defineField({
             name: 'name',
             type: 'string',
             title: 'Name of the category',
         }),
-        definedField({
+        defineField({
             name: 'slug',
             type: 'slug',
             title: 'Category slug',
