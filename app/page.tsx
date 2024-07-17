@@ -1,8 +1,6 @@
 import { client, sanityFetch } from "@/sanity/client";
 import { SanityDocument } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import Image from "next/image";
 
 const PRODUCTS_QUERY = `*[_type == "product"]{_id, name, images}|order(name asc)`;
 
@@ -16,12 +14,12 @@ export default async function HomePage() {
 
   return (
     <main className="container mx-auto w-full">
-      <h1 className="text-3xl font-bold my-8">Products</h1>
+      {/* <h1 className="text-3xl font-bold my-8">Products</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <div
             key={product._id}
-            className="bg-white p-4 shadow rounded h-50 w-50 hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+            className="bg-white p-4 border solid border-red-950 hover:shadow-lg rounded h-50 w-50 hover:scale-105 transition-transform duration-300 "
           >
             <Image
               src={builder.image(product.images[0] as SanityImageSource).url()}
@@ -29,13 +27,14 @@ export default async function HomePage() {
               width={400}
               height={400}
               layout="responsive"
+              className="rounded-t-lg"
             />
             {product.name && (
-              <h2 className="text-xl font-bold text-black">{product.name}</h2>
+              <h2 className="text-xl font-bold text-black mt-8">{product.name}</h2>
             )}
           </div>
         ))}
-      </div>
+      </div> */}
     </main>
   );
 }
