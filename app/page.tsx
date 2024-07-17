@@ -1,9 +1,8 @@
-import { SanityDocument } from "@sanity/client";
 import { client, sanityFetch } from "@/sanity/client";
+import { SanityDocument } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import Image from "next/image";
-import { Images } from "lucide-react";
 
 const PRODUCTS_QUERY = `*[_type == "product"]{_id, name, images}|order(name asc)`;
 
@@ -22,7 +21,7 @@ export default async function HomePage() {
         {products.map((product) => (
           <div
             key={product._id}
-            className="bg-white p-4 shadow rounded h-50 w-50"
+            className="bg-white p-4 shadow rounded h-50 w-50 hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
           >
             <Image
               src={builder.image(product.images[0] as SanityImageSource).url()}
