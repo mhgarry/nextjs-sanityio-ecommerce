@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/ModeToggle";
 import Link from "next/link";
 
 
@@ -9,6 +10,7 @@ export default function Navbar() {
                 Emporium
                 </span>
             </Link>
+            <ModeToggle />
         </nav>
     )
 }
