@@ -13,28 +13,30 @@ export default async function HomePage() {
   });
 
   return (
-    <main className="container mx-auto w-full">
-      {/* <h1 className="text-3xl font-bold my-8">Products</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <div
-            key={product._id}
-            className="bg-white p-4 border solid border-red-950 hover:shadow-lg rounded h-50 w-50 hover:scale-105 transition-transform duration-300 "
-          >
-            <Image
-              src={builder.image(product.images[0] as SanityImageSource).url()}
-              alt={product.name}
-              width={400}
-              height={400}
-              layout="responsive"
-              className="rounded-t-lg"
-            />
-            {product.name && (
-              <h2 className="text-xl font-bold text-black mt-8">{product.name}</h2>
-            )}
-          </div>
-        ))}
-      </div> */}
-    </main>
+  <div>
+      <h4 className="text-sm font-bold">This is the homepage of the emporium</h4>
+  </div>
+
+      // {/* <h1 className="text-3xl font-bold my-8">Products</h1>
+      // <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      //   {products.map((product) => (
+      //     <div
+      //       key={product._id}
+      //       className="bg-white p-4 border solid border-red-950 hover:shadow-lg rounded h-50ui w-50 hover:scale-105 transition-transform duration-300 "
+      //     >
+      //       <Image
+      //         src={builder.image(product.images[0] as SanityImageSource).url()}
+      //         alt={product.name}
+      //         width={400}
+      //         height={400}
+      //         layout="responsive"
+      //         className="rounded-t-lg"
+      //       />
+      //       {product.name && (
+      //         <h2 className="text-xl font-bold text-black mt-8">{product.name}</h2>
+      //       )}
+      //     </div>
+      //   ))}
+      // </div> */}
   );
 }
