@@ -1,7 +1,7 @@
+import Tile from "@/components/Tile";
 import { client, sanityFetch } from "@/sanity/client";
 import { SanityDocument } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-
 const PRODUCTS_QUERY = `*[_type == "product"]{_id, name, images}|order(name asc)`;
 
 const { projectId, dataset } = client.config();
@@ -13,10 +13,20 @@ export default async function HomePage() {
   });
 
   return (
-  <div>
-      <h4 className="text-sm font-bold">This is the homepage of the emporium</h4>
-  </div>
+  <div className="mx-auto py-5 max-w-6xl">
+    <div>
+          <h4 className="text-sm font-bold break-words:break-none">This is the homepage of the emporium</h4>
+    </div>
+  
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
 
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        </div>
+  </div>);
       // {/* <h1 className="text-3xl font-bold my-8">Products</h1>
       // <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       //   {products.map((product) => (
@@ -38,5 +48,4 @@ export default async function HomePage() {
       //     </div>
       //   ))}
       // </div> */}
-  );
 }

@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const categoryType = defineType({
     name: 'category',
@@ -16,5 +16,10 @@ export const categoryType = defineType({
             title: 'Category slug',
             options: { source: 'name' }
         }),
+        defineField({
+            name: 'image',
+            type: 'image',
+            title: 'Category image',
+        })
     ]
 })
